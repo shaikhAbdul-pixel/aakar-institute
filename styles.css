@@ -33,3 +33,15 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 @media(max-width:900px){.nav-links{background:#fff}.nav-links a{color:var(--navy)}.poster-layout{grid-template-columns:1fr 1.1fr;gap:22px}.poster-intro h2{letter-spacing:-1px}.featured-links{grid-template-columns:1fr}.poster-slide{height:510px}}
 @media(max-width:600px){.poster-layout{grid-template-columns:1fr;gap:24px}.poster-section{padding-top:26px}.poster-intro h2{font-size:32px;margin-bottom:15px}.poster-intro>p{font-size:16px}.featured-links{grid-template-columns:1fr 1fr;margin:18px 0}.featured-links a{font-size:14px;padding:12px 9px}.poster-slide{height:auto;aspect-ratio:1054/1492}.poster-controls{gap:8px}.poster-controls button{padding:9px 11px}.course-grid{grid-template-columns:1fr}.cinematic-hero{margin-top:0;padding-top:0}.cinematic-content{padding:60px 18px}.poster-intro .btn{font-size:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.poster-track{transition:none}}
+
+/* About photo and poster-first mobile home layout. */
+.about-art.about-photo{min-height:0;background:none;border-radius:10px;overflow:hidden}
+.about-photo img{display:block;width:100%;height:auto}
+@media(max-width:600px){
+  .poster-section{padding-top:12px;padding-bottom:22px}
+  .poster-layout{display:flex;flex-direction:column;gap:20px}
+  .poster-carousel{order:-1;width:100%}
+  .poster-intro{width:100%;display:flex;flex-direction:column}
+  .poster-intro .featured-links{order:-1;margin:0 0 22px}
+  .poster-intro .btn{align-self:flex-start}
+}
