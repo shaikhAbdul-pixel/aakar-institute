@@ -35,6 +35,7 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.poster-track{transition:none}}
 
 /* About photo and poster-first mobile home layout. */
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .about-art.about-photo{min-height:0;background:none;border-radius:10px;overflow:hidden}
 .about-photo img{display:block;width:100%;height:auto}
 .featured-links .featured-link{display:flex;align-items:center;gap:10px;min-width:0;padding:14px 10px;font-size:15px}
@@ -53,3 +54,13 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
   .poster-intro .featured-links{order:-1;margin:0 0 22px}
   .poster-intro .btn{align-self:flex-start}
 }
+
+/* Full-width landscape banners on desktop and mobile. */
+.landscape-hero{padding:16px 0 0;background:#f3f5fb}
+.landscape-hero .poster-layout{display:flex;flex-direction:column;gap:20px}
+.landscape-hero .poster-carousel{width:100%;order:0}
+.landscape-hero .poster-slide{height:auto;aspect-ratio:16/9;min-width:0}
+.landscape-hero .poster-slide img{width:100%;height:100%;object-fit:contain}
+.landscape-hero .featured-links{width:100%;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 20px;order:0}
+.landscape-hero .poster-controls{margin-top:10px}
+@media(max-width:600px){.landscape-hero{padding-top:8px}.landscape-hero .poster-layout{gap:16px}.landscape-hero .featured-links{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}.landscape-hero .poster-viewport{border-radius:6px}.landscape-hero .poster-slide{height:auto;aspect-ratio:16/9}.landscape-hero~.courses{padding-top:30px}}
