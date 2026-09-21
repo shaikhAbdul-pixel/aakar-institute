@@ -75,3 +75,48 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 .featured-links .featured-icon{width:58px;height:58px;flex:0 0 58px;padding:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 5px 14px rgba(20,35,75,.14)}
 .featured-links .featured-icon img{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:600px){.featured-links .featured-link .featured-icon{width:50px;height:50px;flex-basis:50px;border-radius:12px}}
+
+/* Final responsive polish for desktop, tablet and mobile. */
+@media(min-width:1200px){
+  .container{width:min(1240px,calc(100% - 64px))}
+  .course-grid{gap:22px}
+}
+@media(max-width:900px){
+  .section{padding:78px 0}
+  .contact-box{padding:54px 42px}
+  .footer-grid{gap:38px}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1160px)}
+  .topbar{height:36px;padding:0 12px;gap:12px}
+  .topbar span{padding:4px 9px;white-space:nowrap}
+  .topbar a{font-size:12px;white-space:nowrap}
+  .nav{height:68px}
+  .brand img{width:145px;height:50px}
+  .nav-links{inset:104px 0 auto;max-height:calc(100vh - 104px);overflow-y:auto;padding:25px 22px}
+  .poster-controls{flex-wrap:wrap;row-gap:8px}
+  .poster-controls #poster-pause{min-width:145px}
+  .landscape-hero .featured-link{min-height:82px}
+  .section{padding:58px 0}
+  .section-head h2,.center-head h2,.about h2,.contact h2,.programs h2{font-size:32px;line-height:1.1}
+  .section-head>p{font-size:15px;line-height:1.6}
+  .course-card{padding:20px}
+  .course-card p,.learn-list{font-size:15px;line-height:1.55}
+  .course-card h3{font-size:19px}
+  .course-card .tag{font-size:11px}
+  .card-foot{font-size:13px}
+  .program{gap:10px}
+  .program h3{font-size:16px}
+  .contact{padding-bottom:0}
+  .contact-box{padding:45px 18px;gap:32px}
+  .enquiry-form{padding:22px 18px}
+  .enquiry-form input,.enquiry-form select{min-height:46px}
+  footer{padding:62px 0 24px}
+  .footer-grid{gap:30px}
+}
+@media(max-width:360px){
+  .topbar{justify-content:space-between}
+  .topbar span{font-size:11px}
+  .landscape-hero .featured-links{grid-template-columns:1fr}
+  .landscape-hero .featured-link{min-height:70px}
+}
