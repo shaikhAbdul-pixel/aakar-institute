@@ -64,3 +64,9 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 .landscape-hero .featured-links{width:100%;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 20px;order:0}
 .landscape-hero .poster-controls{margin-top:10px}
 @media(max-width:600px){.landscape-hero{padding-top:8px}.landscape-hero .poster-layout{gap:16px}.landscape-hero .featured-links{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}.landscape-hero .poster-viewport{border-radius:6px}.landscape-hero .poster-slide{height:auto;aspect-ratio:16/9}.landscape-hero~.courses{padding-top:30px}}
+
+/* Course artwork icons supplied for the course cards. */
+.course-icon.course-photo{width:96px;height:96px;padding:0;overflow:hidden;border-radius:20px;background:#f3f5fb;box-shadow:0 8px 22px rgba(20,35,75,.14);border:1px solid rgba(27,48,93,.08)}
+.course-icon.course-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.course-card:hover .course-photo{box-shadow:0 12px 28px rgba(20,35,75,.2)}
+@media(max-width:600px){.course-icon.course-photo{width:88px;height:88px;border-radius:18px}}
