@@ -135,3 +135,55 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
   .landscape-hero .featured-links .featured-icon{width:64px;height:64px;flex-basis:64px;border-radius:14px}
   .landscape-hero .featured-links .course-arrow{display:block;margin-left:auto;font-size:18px}
 }
+
+/* Leadership, faculty and student-success sections. */
+.team-section{background:linear-gradient(180deg,#f7f8fc 0%,#fff 100%)}
+.team-heading{margin-bottom:46px}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.team-card{overflow:hidden;background:#fff;border:1px solid #e4e7f0;border-radius:16px;box-shadow:0 14px 38px rgba(20,29,65,.08);transition:transform .25s ease,box-shadow .25s ease}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(20,29,65,.14)}
+.team-card-director{border-top:4px solid var(--red)}
+.team-photo{aspect-ratio:4/5;overflow:hidden;background:#e9ecf4}
+.team-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.team-content{padding:25px 25px 28px}
+.team-role{display:inline-block;margin-bottom:11px;padding:6px 10px;border-radius:999px;background:#eeeffa;color:var(--navy);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.team-card-director .team-role{background:#fee9ea;color:#c8131b}
+.team-content h3{margin-bottom:9px;font:800 21px/1.25 'Manrope',sans-serif;color:var(--ink)}
+.team-qualification{margin-bottom:7px;color:var(--navy);font-weight:800;font-size:15px}
+.team-detail{margin-bottom:0;color:var(--muted);font-size:13px;line-height:1.55}
+.team-experience{display:flex;align-items:baseline;gap:7px;margin:19px 0 0;padding-top:17px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.team-experience strong{font:800 30px/1 'Manrope',sans-serif;color:var(--red)}
+.team-values{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.team-values span{padding:7px 10px;border-radius:5px;background:#f5f5f8;color:#53576b;font-size:11px;font-weight:700}
+.success-section{padding-top:18px;background:#fff}
+.success-banner{overflow:hidden;margin-bottom:34px;border-radius:16px;border:1px solid #e4e7f0;box-shadow:0 16px 40px rgba(20,29,65,.1)}
+.success-banner img{display:block;width:100%;height:auto}
+.success-grid{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:72px;padding:42px;background:#f7f8fc;border-radius:18px}
+.success-photo{overflow:hidden;border-radius:14px;aspect-ratio:4/5;box-shadow:0 16px 38px rgba(20,29,65,.14)}
+.success-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.success-copy h2{font-size:45px}
+.success-copy>p{max-width:590px;color:var(--muted);font-size:16px;line-height:1.7}
+.success-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+.success-points div{padding:17px 14px;background:#fff;border:1px solid #e4e7f0;border-radius:9px}
+.success-points strong,.success-points span{display:block}
+.success-points strong{font:800 18px/1.2 'Manrope',sans-serif;color:var(--navy)}
+.success-points span{margin-top:5px;color:var(--muted);font-size:11px;line-height:1.4}
+@media(max-width:1200px) and (min-width:901px){.nav{gap:20px}.nav-links{gap:18px}.nav-links a{font-size:13px}.nav-cta{padding-left:14px;padding-right:14px}}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-card-director{grid-column:span 2}.team-card-director{display:grid;grid-template-columns:1fr 1fr}.team-card-director .team-photo{aspect-ratio:auto;min-height:440px}.success-grid{grid-template-columns:1fr;gap:38px}.success-photo{max-width:520px;width:100%;margin:auto}.success-copy{text-align:center}.success-copy .eyebrow{justify-content:center}.success-copy>p{margin-left:auto;margin-right:auto}}
+@media(max-width:600px){
+  .team-heading{margin-bottom:28px}
+  .team-grid{grid-template-columns:1fr;gap:18px}
+  .team-card-director{grid-column:auto;display:block}
+  .team-card-director .team-photo,.team-photo{aspect-ratio:4/5;min-height:0}
+  .team-content{padding:21px 20px 24px}
+  .team-content h3{font-size:20px}
+  .success-section{padding-top:6px}
+  .success-banner{margin-bottom:20px;border-radius:10px}
+  .success-banner img{min-height:160px;object-fit:cover;object-position:center}
+  .success-grid{padding:22px 16px;gap:28px;border-radius:12px}
+  .success-copy h2{font-size:31px}
+  .success-copy>p{font-size:15px}
+  .success-points{grid-template-columns:1fr;gap:9px;margin:24px 0}
+  .success-points div{text-align:left;padding:14px}
+  .success-copy .btn{width:100%}
+}
