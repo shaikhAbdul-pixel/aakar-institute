@@ -246,3 +246,19 @@ footer .footer-grid{grid-template-columns:1fr 1.65fr .7fr;align-items:start}
   .branch-grid article{padding:20px 18px 19px 48px}
   .copyright{align-items:flex-start;flex-direction:column}
 }
+
+/* Light footer theme. */
+footer{background:#f7f8fc;color:var(--ink)}
+footer .footer-grid h4{color:var(--navy)}
+footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
+.footer-brand .footer-hours{color:#777b8d}
+.footer-head-office strong{color:var(--ink)}
+.footer-head-office a{color:var(--navy)}
+.footer-head-office a:hover,.branch-grid a:hover{color:var(--red)}
+.footer-branches{border-top-color:#dfe3ec}
+.footer-section-title h4{color:var(--navy)}
+.branch-grid article{border-color:#e1e5ee;background:#fff;box-shadow:0 10px 26px rgba(20,29,65,.06)}
+.branch-grid h5{color:var(--ink)}
+.branch-grid p{color:var(--muted)}
+.branch-grid a{color:var(--navy)}
+.copyright{border-top-color:#dfe3ec;color:#777b8d}
