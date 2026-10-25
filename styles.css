@@ -255,10 +255,14 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
 .footer-head-office strong{color:var(--ink)}
 .footer-head-office a{color:var(--navy)}
 .footer-head-office a:hover,.branch-grid a:hover{color:var(--red)}
+.footer-head-office{padding:24px 26px;border:1px solid #e1e5ee;border-left:4px solid var(--red);border-radius:10px;background:#fff;box-shadow:0 12px 30px rgba(20,29,65,.07)}
+.footer-head-office h4{margin-bottom:14px}
+.footer-head-office p{font-size:13px;line-height:1.75}
 .footer-branches{border-top-color:#dfe3ec}
 .footer-section-title h4{color:var(--navy)}
 .branch-grid article{border-color:#e1e5ee;background:#fff;box-shadow:0 10px 26px rgba(20,29,65,.06)}
 .branch-grid h5{color:var(--ink)}
 .branch-grid p{color:var(--muted)}
+@media(max-width:600px){.footer-head-office{padding:22px 20px}}
 .branch-grid a{color:var(--navy)}
 .copyright{border-top-color:#dfe3ec;color:#777b8d}
