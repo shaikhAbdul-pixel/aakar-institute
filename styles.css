@@ -312,3 +312,7 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
   .faculty-track{animation:none}
   .faculty-set[aria-hidden="true"]{display:none}
 }
+
+
+/* Updated wide footer logo: transparent so it blends with the footer background. */
+.footer-grid img.footer-logo-wide{width:min(300px,100%);height:auto;object-fit:contain;background:transparent;padding:0;display:block}
