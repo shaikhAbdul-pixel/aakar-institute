@@ -316,3 +316,38 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
 
 /* Updated wide footer logo: transparent so it blends with the footer background. */
 .footer-grid img.footer-logo-wide{width:min(300px,100%);height:auto;object-fit:contain;background:transparent;padding:0;display:block}
+
+
+/* Active navigation, home job-support badge and animated data highlights */
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:2px;border-radius:3px;background:var(--red);transform:scaleX(0);transform-origin:center;transition:transform .22s ease}
+.nav-links a.active{color:var(--red);font-weight:800}
+.nav-links a.active::after{transform:scaleX(1)}
+
+.landscape-hero{position:relative}
+.hero-job-support{position:absolute;z-index:8;top:18px;right:max(24px,calc((100vw - 1180px)/2));display:flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(13,30,75,.82);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);color:#fff;box-shadow:0 10px 25px rgba(7,20,54,.2);animation:job-support-float 3s ease-in-out infinite}
+.hero-job-support span{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#25d366;font-weight:900}
+.hero-job-support strong{font-size:.86rem;letter-spacing:.02em}
+@keyframes job-support-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+.data-skill-pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.data-skill-pills span{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#eef3ff;color:var(--navy);font-size:.76rem;font-weight:800;border:1px solid #dbe5ff;animation:data-pill-pulse 2.8s ease-in-out infinite}
+.data-skill-pills span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(227,30,36,.35);animation:data-dot-pulse 2s ease-out infinite}
+.data-skill-pills span:nth-child(2){animation-delay:.25s}
+.data-skill-pills span:nth-child(3){animation-delay:.5s}
+.animated-course-icon{animation:course-icon-float 3.2s ease-in-out infinite}
+.experience-badge{display:inline-flex!important;align-items:center;animation:experience-glow 2.5s ease-in-out infinite}
+@keyframes data-pill-pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes data-dot-pulse{70%{box-shadow:0 0 0 8px rgba(227,30,36,0)}100%{box-shadow:0 0 0 0 rgba(227,30,36,0)}}
+@keyframes course-icon-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(1.5deg)}}
+@keyframes experience-glow{0%,100%{box-shadow:0 0 0 rgba(227,30,36,0)}50%{box-shadow:0 0 0 5px rgba(227,30,36,.12)}}
+
+@media(max-width:760px){
+  .nav-links a.active::after{bottom:-4px}
+  .hero-job-support{top:10px;right:12px;padding:8px 11px}
+  .hero-job-support strong{font-size:.72rem}
+  .hero-job-support span{width:21px;height:21px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-job-support,.data-skill-pills span,.data-skill-pills span::before,.animated-course-icon,.experience-badge{animation:none}
+}

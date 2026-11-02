@@ -42,3 +42,44 @@ motionPreference.addEventListener('change',event=>{paused=event.matches;restartS
 restartSlideshow();
 document.querySelectorAll('[data-course]').forEach(link=>link.addEventListener('click',()=>{document.querySelector('[name="course"]').value=link.dataset.course}));
 document.querySelectorAll('.featured-links a').forEach(link=>link.addEventListener('click',()=>document.querySelector('[data-filter="all"]').click()));
+
+
+// Keep the navigation highlight synced with the section currently in view.
+(() => {
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const targets = links
+    .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+    .filter(item => item.section);
+  if (!targets.length) return;
+
+  let ticking = false;
+  const updateActiveNav = () => {
+    const marker = window.scrollY + Math.min(window.innerHeight * 0.38, 260);
+    let current = targets[0];
+    targets.forEach(item => {
+      if (item.section.offsetTop <= marker) current = item;
+    });
+    links.forEach(link => {
+      const active = link === current.link;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(updateActiveNav);
+    }
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  links.forEach(link => link.addEventListener('click', () => {
+    links.forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+  }));
+  updateActiveNav();
+})();
