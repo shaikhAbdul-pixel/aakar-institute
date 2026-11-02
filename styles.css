@@ -351,3 +351,26 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){
   .hero-job-support,.data-skill-pills span,.data-skill-pills span::before,.animated-course-icon,.experience-badge{animation:none}
 }
+
+
+/* Supplied course artwork and highly visible experience animation */
+.data-skill-pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 8px}
+.data-skill-pills .data-skill-pill{position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;padding:7px 7px 9px;border-radius:14px;background:#fff;border:1px solid #dfe5f2;box-shadow:0 7px 18px rgba(22,39,83,.08);overflow:hidden;animation:tool-icon-float 2.8s ease-in-out infinite}
+.data-skill-pills .data-skill-pill:nth-child(2){animation-delay:.3s}
+.data-skill-pills .data-skill-pill:nth-child(3){animation-delay:.6s}
+.data-skill-pills .data-skill-pill::before{display:none}
+.data-skill-pill img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block}
+.data-skill-pill b{font-size:.72rem;line-height:1.15;color:var(--navy);text-align:center}
+@keyframes tool-icon-float{0%,100%{transform:translateY(0);box-shadow:0 7px 18px rgba(22,39,83,.08)}50%{transform:translateY(-8px);box-shadow:0 15px 28px rgba(22,39,83,.18)}}
+
+.about-credentials .experience-badge{position:relative;display:inline-flex!important;align-items:center;gap:7px;padding:9px 13px!important;background:linear-gradient(135deg,#fff2f2,#fff)!important;border:1px solid rgba(227,30,36,.35)!important;color:var(--red)!important;font-weight:800!important;animation:experience-pop 1.9s ease-in-out infinite!important;transform-origin:center}
+.experience-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-style:normal;box-shadow:0 0 0 0 rgba(227,30,36,.42);animation:experience-icon-pulse 1.9s ease-out infinite}
+.experience-badge b{font-size:1.06em}
+@keyframes experience-pop{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-5px) scale(1.045)}}
+@keyframes experience-icon-pulse{0%{transform:rotate(0);box-shadow:0 0 0 0 rgba(227,30,36,.42)}55%{transform:rotate(16deg);box-shadow:0 0 0 9px rgba(227,30,36,0)}100%{transform:rotate(0);box-shadow:0 0 0 0 rgba(227,30,36,0)}}
+
+@media(max-width:520px){
+  .data-skill-pills{gap:7px}
+  .data-skill-pills .data-skill-pill{padding:5px 5px 8px}
+  .data-skill-pill b{font-size:.64rem}
+}
