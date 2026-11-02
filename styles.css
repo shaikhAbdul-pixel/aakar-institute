@@ -374,3 +374,14 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
   .data-skill-pills .data-skill-pill{padding:5px 5px 8px}
   .data-skill-pill b{font-size:.64rem}
 }
+
+
+/* Keep Job Support static; reserve movement for the 18+ experience badge. */
+.hero-job-support{animation:none!important;transform:none!important}
+.about-credentials .experience-badge{animation:experience-move-visible 1.7s ease-in-out infinite!important}
+@keyframes experience-move-visible{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  25%{transform:translate3d(5px,-5px,0) scale(1.04)}
+  50%{transform:translate3d(0,-8px,0) scale(1.06)}
+  75%{transform:translate3d(-5px,-5px,0) scale(1.04)}
+}
