@@ -397,3 +397,14 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
 @keyframes hero-experience-pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
 @media(max-width:760px){.hero-experience-home{top:58px;right:12px;padding:8px 11px}.hero-experience-home strong{font-size:.72rem}.hero-experience-icon{width:22px;height:22px}}
 @media(prefers-reduced-motion:reduce){.hero-experience-home,.hero-experience-icon{animation:none}}
+
+/* Header excellence badge and uncropped certification imagery. */
+.brand-cluster{display:flex;align-items:center;gap:10px;flex:none}
+.nav-excellence-badge{display:block;width:58px;height:58px;object-fit:contain;border-radius:50%;flex:none}
+.success-photo{aspect-ratio:auto;background:#fff}
+.success-photo img{width:100%;height:auto;object-fit:contain;object-position:center}
+@media(max-width:600px){
+  .brand-cluster{gap:7px}
+  .nav-excellence-badge{width:42px;height:42px}
+  .success-banner img{min-height:0;height:auto;object-fit:contain;object-position:center}
+}
