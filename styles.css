@@ -400,11 +400,11 @@ footer .footer-grid p,footer .footer-grid a{color:var(--muted)}
 
 /* Header excellence badge and uncropped certification imagery. */
 .brand-cluster{display:flex;align-items:center;gap:10px;flex:none}
-.nav-excellence-badge{display:block;width:58px;height:58px;object-fit:contain;border-radius:50%;flex:none}
+.nav-excellence-badge{display:block;width:36px;height:36px;object-fit:contain;border-radius:50%;flex:none}
 .success-photo{aspect-ratio:auto;background:#fff}
 .success-photo img{width:100%;height:auto;object-fit:contain;object-position:center}
 @media(max-width:600px){
   .brand-cluster{gap:7px}
-  .nav-excellence-badge{width:42px;height:42px}
+  .nav-excellence-badge{width:30px;height:30px}
   .success-banner img{min-height:0;height:auto;object-fit:contain;object-position:center}
 }
