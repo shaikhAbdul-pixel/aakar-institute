@@ -11,7 +11,7 @@ document.getElementById('enquiryForm').addEventListener('submit',e=>{
   setTimeout(()=>toast.classList.remove('show'),3500);
 });
 
-// Rotate all supplied posters every two seconds; respect pause and reduced motion.
+// Rotate all supplied posters every 2.5 seconds; respect pause and reduced motion.
 const track=document.querySelector('.poster-track');
 const slides=[...document.querySelectorAll('.poster-slide')];
 const viewport=document.querySelector('.poster-viewport');
@@ -27,7 +27,7 @@ function showPoster(next){
 function restartSlideshow(){
   clearInterval(timer);
   pauseButton.textContent=paused?'Play slideshow':'Pause slideshow';
-  if(!paused&&!document.hidden)timer=setInterval(()=>showPoster(slideIndex+1),2000);
+  if(!paused&&!document.hidden)timer=setInterval(()=>showPoster(slideIndex+1),2500);
 }
 function movePoster(direction){showPoster(slideIndex+direction);restartSlideshow()}
 document.getElementById('poster-prev').addEventListener('click',()=>movePoster(-1));

@@ -161,6 +161,16 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
   .landscape-hero .featured-links .course-arrow{display:block;margin-left:auto;font-size:18px}
 }
 
+/* Square 3D course icons used by the home carousel. */
+.icon-slider .poster-viewport,.icon-slider .poster-slide{background:#fff}
+.icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none}
+@media(max-width:600px){
+  .icon-slider .poster-viewport{border-radius:18px;background:#fff}
+  .icon-slider .poster-slide{aspect-ratio:1/1;background:#fff}
+  .icon-slider .poster-slide::before,.icon-slider .poster-slide::after{display:none}
+  .icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none}
+}
+
 /* Leadership, faculty and student-success sections. */
 .team-section{background:linear-gradient(180deg,#f7f8fc 0%,#fff 100%)}
 .team-heading{margin-bottom:46px}
