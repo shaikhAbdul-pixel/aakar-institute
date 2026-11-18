@@ -162,13 +162,13 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 }
 
 /* Square 3D course icons used by the home carousel. */
-.icon-slider .poster-viewport,.icon-slider .poster-slide{background:#fff}
-.icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none}
+.icon-slider .poster-viewport,.icon-slider .poster-slide{background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
+.icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply}
 @media(max-width:600px){
-  .icon-slider .poster-viewport{border-radius:18px;background:#fff}
-  .icon-slider .poster-slide{aspect-ratio:1/1;background:#fff}
+  .icon-slider .poster-viewport{border-radius:18px;background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
+  .icon-slider .poster-slide{aspect-ratio:1/1;background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
   .icon-slider .poster-slide::before,.icon-slider .poster-slide::after{display:none}
-  .icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none}
+  .icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply}
 }
 
 /* Leadership, faculty and student-success sections. */
