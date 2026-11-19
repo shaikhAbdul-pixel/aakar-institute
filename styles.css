@@ -66,10 +66,10 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 @media(max-width:600px){.landscape-hero{padding-top:8px}.landscape-hero .poster-layout{gap:16px}.landscape-hero .featured-links{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}.landscape-hero .poster-viewport{border-radius:6px}.landscape-hero .poster-slide{height:auto;aspect-ratio:16/9}.landscape-hero~.courses{padding-top:30px}}
 
 /* Course artwork icons supplied for the course cards. */
-.course-icon.course-photo{width:96px;height:96px;padding:0;overflow:hidden;border-radius:20px;background:#f3f5fb;box-shadow:0 8px 22px rgba(20,35,75,.14);border:1px solid rgba(27,48,93,.08)}
+.course-icon.course-photo{width:116px;height:116px;padding:0;overflow:hidden;border-radius:24px;background:#f3f7ff;box-shadow:0 10px 26px rgba(20,35,75,.16);border:1px solid rgba(27,48,93,.08)}
 .course-icon.course-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .course-card:hover .course-photo{box-shadow:0 12px 28px rgba(20,35,75,.2)}
-@media(max-width:600px){.course-icon.course-photo{width:88px;height:88px;border-radius:18px}}
+@media(max-width:600px){.course-icon.course-photo{width:104px;height:104px;border-radius:21px}}
 
 /* Image artwork in the featured course shortcuts below the carousel. */
 .featured-links .featured-icon{width:58px;height:58px;flex:0 0 58px;padding:0;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 5px 14px rgba(20,35,75,.14)}
@@ -162,13 +162,14 @@ html{scroll-padding-top:110px}.nav-wrap{background:#fff;color:var(--ink)}.nav-li
 }
 
 /* Square 3D course icons used by the home carousel. */
-.icon-slider .poster-viewport,.icon-slider .poster-slide{background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
-.icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply}
+.icon-slider .poster-viewport,.icon-slider .poster-slide{background:radial-gradient(circle at 50% 44%,#fff 0 23%,#edf6ff 48%,#dfe5ff 72%,#f5d9e9 100%)}
+.icon-slider .poster-viewport{box-shadow:0 20px 50px rgba(31,55,116,.18),inset 0 0 70px rgba(255,255,255,.65)}
+.icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply;filter:contrast(1.03) saturate(1.08)}
 @media(max-width:600px){
-  .icon-slider .poster-viewport{border-radius:18px;background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
-  .icon-slider .poster-slide{aspect-ratio:1/1;background:#dcd7ff url('images/slider-3d/slider-background.webp') center/cover no-repeat}
+  .icon-slider .poster-viewport{border-radius:18px;background:radial-gradient(circle at 50% 43%,#fff 0 24%,#edf6ff 50%,#dde5ff 76%,#f3d9e8 100%)}
+  .icon-slider .poster-slide{aspect-ratio:1/1;background:transparent}
   .icon-slider .poster-slide::before,.icon-slider .poster-slide::after{display:none}
-  .icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply}
+  .icon-slider .poster-slide img{object-fit:contain;object-position:center;transform:none;mix-blend-mode:multiply;filter:contrast(1.03) saturate(1.08)}
 }
 
 /* Leadership, faculty and student-success sections. */
